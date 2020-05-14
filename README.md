@@ -42,7 +42,7 @@ echo "blacklist rtl8xxxu" >/etc/modprobe.d/blacklist-rtl8xxxu.conf
 
 No meu caso consegui remover o driver antigo com o comando "modprobe -r rtl8xxxu", mas para subir o novo com o comando "modprobe rtl8192eu" deu alguns problemas. **Então reboot**.
 
-Agora podemos fazer o mesmo comando feito no início para conferir o driver:
+Agora podemos fazer o mesmo comando feito no início para conferir o driver (Driver=rtl8192eu):
 ```
 # lsusb -tv
 /:  Bus 02.Port 1: Dev 1, Class=root_hub, Driver=xhci_hcd/10p, 480M
