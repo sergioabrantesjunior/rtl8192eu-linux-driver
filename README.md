@@ -23,15 +23,19 @@ Vamos compilar o driver fornecido pelo fabricante utilizando o dkms (apt install
 
 1. Baixar o fonte e descompactá-lo
 ```
-cd /tmp
-wget https://static.tp-link.com/2019/201909/20190927/TL-WN823N_EU_V3_160315_Linux.zip
-mv Driver /opt/rtl8192eu-linux-driver
+cd /opt
+git clone https://github.com/sergioabrantesjunior/rtl8192eu-linux-driver.git
 ```
 2. Compilar
 
 ```
-cd /opt
-
+dkms add rtl8192eu-linux-driver
+dkms build -m rtl8192eu/1.0
+dkms install rtl8192eu/1.0
+```
+3. Bloquear o carregamento do módulo errado
+```
+echo "blacklist rtl8xxxu" >/etc/modprobe.d/blacklist-rtl8xxxu.conf
 ```
 
 # Referências
