@@ -40,6 +40,7 @@ echo "blacklist rtl8xxxu" >/etc/modprobe.d/blacklist-rtl8xxxu.conf
 
 # Referências
 [Base para os comandos](https://salsa.debian.org/kretcheu/tutoriais/-/blob/master/dkms.md)
+
 [Fonte do driver](https://github.com/Mange/rtl8192eu-linux-driver)
 
 
